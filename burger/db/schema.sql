@@ -10,3 +10,4 @@ devoured BOOLEAN DEFAULT false,
     date TIMESTAMP NOT NULL,
     PRIMARY KEY (id)
 );    
+
