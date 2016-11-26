@@ -27,3 +27,17 @@ router.post('/burgers/create', function(req, res) {
 
 // route to catch burger
 router.put('/burgers/update', function(req,res){
+
+//update the burger
+ Burger.findOne({where:{id: req.body.burger_id}})
+    .then(function(theBurger){
+        return theBurger.updateAttributes({
+            devoured: true
+        }).then(function(){
+
+
+        	  // Page reload
+            res.redirect('/');
+        })
+    });
+});
