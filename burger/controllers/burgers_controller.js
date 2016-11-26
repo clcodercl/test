@@ -24,3 +24,6 @@ router.post('/burgers/create', function(req, res) {
         res.redirect('/');
     });
 });
+
+// route to catch burger
+router.put('/burgers/update', function(req,res){
